@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\PageController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,18 +18,18 @@ use app\Http\Controllers\PageController;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    echo "Selamat Datang";
-});
+// Route::get('/', function () {
+//     echo "Selamat Datang";
+// });
 
-Route::get('/about', function () {
-    echo "NIM : 2141720230", "<br>", "Nama : Ilham Khalis Putra Agatha", "<br>",  "Kelas : 2H";
-});
+// Route::get('/about', function () {
+//     echo "NIM : 2141720230", "<br>", "Nama : Ilham Khalis Putra Agatha", "<br>",  "Kelas : 2H";
+// });
 
-Route::get('/articles/{id}', function ($id) {
-    echo "Ini merupakan halaman artikel dengan id $id";
-});
+// Route::get('/articles/{id}', function ($id) {
+//     echo "Ini merupakan halaman artikel dengan id $id";
+// });
 
-Route::get('/', [PageController::class, 'index']);
+Route::get('/index', [PageController::class, 'index']);
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/articles/{id}', [PageController::class, 'articles']);
